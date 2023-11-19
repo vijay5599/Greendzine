@@ -47,7 +47,7 @@ function SignIn() {
     }));
     setErrors((prevErrors) => ({
       ...prevErrors,
-      [name]: "",
+      [name]: "", // Clear the corresponding error when the user starts typing
     }));
   };
 
@@ -61,7 +61,7 @@ function SignIn() {
       ) {
         navigate("/dashboard");
       } else {
-        alert("Invalid credentials");
+        setErrors(updatedErrors);
       }
     }
   };
@@ -79,11 +79,11 @@ function SignIn() {
           value={formData.email}
           onChange={handleChange}
           className={`w-60 my-3 p-3 rounded-full bg-[#242424] shadow-inner shadow-gray-700 outline-none ${
-            errors.email ? "border-red-500" : ""
+            errors.email ? "border-red-500 border-2" : ""
           }`}
         />
         {errors.email && (
-          <div className="text-red-500 text-sm">{errors.email}</div>
+          <p className="text-red-500 text-sm mt-1">{errors.email}</p>
         )}
         <input
           type="password"
@@ -93,11 +93,11 @@ function SignIn() {
           value={formData.password}
           onChange={handleChange}
           className={`w-60 my-3 p-3 rounded-full bg-[#242424] shadow-inner shadow-gray-700 outline-none ${
-            errors.password ? "border-red-500" : ""
+            errors.password ? "border-red-500 border-2" : ""
           }`}
         />
         {errors.password && (
-          <div className="text-red-500 text-sm">{errors.password}</div>
+          <div className="text-red-500 text-sm mt-1">{errors.password}</div>
         )}
         <button
           type="submit"

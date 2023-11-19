@@ -3,11 +3,12 @@ import contact from "../assets/Group 46@2x.png";
 import MOPTr0 from "../assets/moptro logo@2x.png";
 import HomeOutlinedIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 // import { HorizontalBarChart } from "../assets/HorizontalLineChart";
 
 const ProductivityDashboard = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const data = [
     {
       title: "Productivity on Monday",
@@ -70,11 +71,22 @@ const ProductivityDashboard = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between px-20 py-4 bg-[#0f2323] rounded-3xl">
-        <HomeOutlinedIcon style={{ color: "green", fontSize: "45px" }} />
+      <div className="flex justify-between px-14 py-4 bg-[#0f2323] rounded-3xl">
+        <HomeOutlinedIcon
+          style={{
+            color: "green",
+            fontSize: "45px",
+            width: location.pathname === "/dashboard" ? "70px" : "45px",
+            backgroundColor:
+              location.pathname === "/dashboard" ? "#8CC084" : "",
+          }}
+        />
         <PersonIcon
           onClick={() => navigate("/user")}
-          style={{ color: "green", fontSize: "45px" }}
+          style={{
+            color: "green",
+            fontSize: "45px",
+          }}
         />
       </div>
     </div>

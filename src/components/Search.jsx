@@ -4,7 +4,7 @@ import MOPTr0 from "../assets/moptro logo@2x.png";
 import HomeOutlinedIcon from "@mui/icons-material/Home";
 import PersonIcon from "@mui/icons-material/Person";
 import SearchIcon from "@mui/icons-material/Search";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 // import { HorizontalBarChart } from "../assets/HorizontalLineChart";
 
 const SearchPerson = () => {
@@ -71,7 +71,7 @@ const SearchPerson = () => {
       role: "System Administrator",
     },
   ];
-
+  const location = useLocation();
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredData, setFilteredData] = useState(initialData);
   const handleSearch = () => {
@@ -116,7 +116,7 @@ const SearchPerson = () => {
             />
           </div>
 
-          <div className="max-h-[430px] overflow-y-auto mt-5">
+          <div className="max-h-[480px] overflow-y-auto mt-5">
             {filteredData.map((item) => (
               <div
                 key={item.id}
@@ -140,12 +140,19 @@ const SearchPerson = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between px-20 py-4 bg-[#0f2323] rounded-3xl">
+      <div className="flex justify-between px-14 py-4 bg-[#0f2323] rounded-3xl">
         <HomeOutlinedIcon
           onClick={() => navigate("/dashboard")}
           style={{ color: "green", fontSize: "45px" }}
         />
-        <PersonIcon style={{ color: "green", fontSize: "45px" }} />
+        <PersonIcon
+          style={{
+            color: "green",
+            fontSize: "45px",
+            width: location.pathname === "/user" ? "70px" : "45px",
+            backgroundColor: location.pathname === "/user" ? "#8CC084" : "",
+          }}
+        />
       </div>
     </div>
   );

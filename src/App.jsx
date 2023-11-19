@@ -1,4 +1,3 @@
-import "./App.css";
 import ProductivityDashboard from "./components/ProductivityDashboard";
 import SearchPerson from "./components/Search";
 import SignIn from "./components/SignIn";
