@@ -74,6 +74,7 @@ const ProductivityDashboard = () => {
       <div className="flex justify-between px-14 py-4 bg-[#0f2323] rounded-3xl">
         <HomeOutlinedIcon
           style={{
+            cursor: 'pointer',
             color: "green",
             fontSize: "45px",
             width: location.pathname === "/dashboard" ? "70px" : "45px",
@@ -84,6 +85,7 @@ const ProductivityDashboard = () => {
         <PersonIcon
           onClick={() => navigate("/user")}
           style={{
+            cursor: 'pointer',
             color: "green",
             fontSize: "45px",
           }}

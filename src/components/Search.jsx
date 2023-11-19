@@ -143,11 +143,12 @@ const SearchPerson = () => {
       <div className="flex justify-between px-14 py-4 bg-[#0f2323] rounded-3xl">
         <HomeOutlinedIcon
           onClick={() => navigate("/dashboard")}
-          style={{ color: "green", fontSize: "45px" }}
+          style={{ color: "green", fontSize: "45px", cursor: "pointer" }}
         />
         <PersonIcon
           style={{
             color: "green",
+            cursor: "pointer",
             fontSize: "45px",
             width: location.pathname === "/user" ? "70px" : "45px",
             backgroundColor: location.pathname === "/user" ? "#8CC084" : "",
