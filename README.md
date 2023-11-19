@@ -8,7 +8,7 @@
 2) Open your browser and visit [http://localhost:5173](http://localhost:5173)](http://localhost:5173) to access the application.
 3) Use credentials:
 - Email : vbvijay@gmail.com
-- Password : vijay@12
+- Password : vijay@123
 
 # Technology used
 * Reactjs
