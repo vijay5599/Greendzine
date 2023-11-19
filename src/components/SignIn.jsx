@@ -61,7 +61,7 @@ function SignIn() {
       ) {
         navigate("/dashboard");
       } else {
-        setErrors(updatedErrors);
+        alert("Invalid credentials");
       }
     }
   };
