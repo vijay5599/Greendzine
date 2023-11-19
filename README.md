@@ -7,8 +7,8 @@
 1) run the commaond : ```npm run dev```
 2) Open your browser and visit [http://localhost:5173](http://localhost:5173)](http://localhost:5173) to access the application.
 3) Use credentials:
-       1) Email : vbvijay@gmail.com
-       2) Password : vijay@12
+- Email : vbvijay@gmail.com
+- Password : vijay@12
 
 # Technology used
 * Reactjs
